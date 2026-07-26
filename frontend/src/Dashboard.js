@@ -52,7 +52,7 @@ function Dashboard() {
   const getSuggestion = async () => {  
     try {  
       const res = await axios.get(  
-        "http://localhost:5000/suggestion",  
+        "https://study-tracker-backend-tocq.onrender.com/suggestion",  
         {  
           headers: {  
             Authorization: `Bearer ${token}`  
@@ -73,7 +73,7 @@ function Dashboard() {
     }
 
     try {  
-      await axios.post("http://localhost:5000/add-study",  
+      await axios.post("https://study-tracker-backend-tocq.onrender.com/add-study",  
         {  
           subject,  
           hours,  
@@ -113,7 +113,7 @@ function Dashboard() {
 
     try {
       await axios.post(
-        "http://localhost:5000/upload",
+        "https://study-tracker-backend-tocq.onrender.com/upload",
         formData,
         {
           headers: {
@@ -135,7 +135,7 @@ function Dashboard() {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/get-study",
+        "https://study-tracker-backend-tocq.onrender.com/get-study",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -152,7 +152,7 @@ function Dashboard() {
   const getFiles = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/files",
+        "https://study-tracker-backend-tocq.onrender.com/files",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -169,7 +169,7 @@ function Dashboard() {
   const deleteFile = async (filename) => {
     try {
       await axios.delete(
-        `http://localhost:5000/delete-file/${filename}`,
+        `https://study-tracker-backend-tocq.onrender.com/delete-file/${filename}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -189,7 +189,7 @@ function Dashboard() {
   const deleteStudy = async (id) => {
     try {
       await axios.delete(  
-        `http://localhost:5000/delete-study/${id}`,  
+        `https://study-tracker-backend-tocq.onrender.com/delete-study/${id}`,  
         {  
           headers: {  
             Authorization: `Bearer ${token}`  
@@ -210,7 +210,7 @@ function Dashboard() {
   const updateStudy = async () => {
     try {
       await axios.put(  
-        `http://localhost:5000/update-study/${editId}`,  
+        `https://study-tracker-backend-tocq.onrender.com/update-study/${editId}`,  
         {  
           subject,  
           hours,  
@@ -443,7 +443,7 @@ return (
                 className="flex justify-between items-center bg-black/30 backdrop-blur-xl border border-white/10 p-4 rounded-2xl mb-4 hover:scale-[1.02] transition-all duration-300"
               >
                 <a
-                  href={`http://localhost:5000/uploads/${file.filename}`}
+                  href={`https://study-tracker-backend-tocq.onrender.com/uploads/${file.filename}`}
                   target="_blank"
                   rel="noreferrer"
                   className="text-white hover:text-cyan-400 transition-all"

@@ -16,7 +16,7 @@ function Signup() {
     }
 
     try {
-      await axios.post("http://localhost:5000/signup", {
+      await axios.post("https://study-tracker-backend-tocq.onrender.com/signup", {
         name,
         email,
         password,

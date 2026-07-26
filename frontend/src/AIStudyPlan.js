@@ -23,7 +23,7 @@ function AIStudyPlan() {
       setLoading(true)
 
       const response = await axios.post(
-        "http://localhost:5000/generate-study-plan",
+        "https://study-tracker-backend-tocq.onrender.com/generate-study-plan",
         {
           subject,
           dailyHours: Number(dailyHours),
