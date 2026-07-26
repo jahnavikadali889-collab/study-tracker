@@ -242,8 +242,7 @@ function Dashboard() {
   getData()
   getSuggestion()
   getFiles()
-// eslint-disable-next-line react-hooks/exhaustive-deps
-}, [])
+}, [getData, getSuggestion, getFiles]) // Ikkada dependecies add chesam
 
   // 🔹 Subjects
   const subjects = data.map(item => item.subject)
