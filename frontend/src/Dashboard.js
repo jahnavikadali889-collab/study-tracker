@@ -239,10 +239,11 @@ function Dashboard() {
   }
 
   useEffect(() => {
-    getData()
-    getSuggestion()
-    getFiles()
-  }, [])
+  getData()
+  getSuggestion()
+  getFiles()
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [])
 
   // 🔹 Subjects
   const subjects = data.map(item => item.subject)
