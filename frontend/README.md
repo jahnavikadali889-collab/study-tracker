@@ -1,70 +1,347 @@
-# Getting Started with Create React App
+📚 Study Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application that helps students track their daily study activities, monitor progress, upload study notes, receive smart suggestions, and generate personalized AI-based study plans.
 
-## Available Scripts
+🚀 Live Application
 
-In the project directory, you can run:
+Frontend:
+https://study-tracker-xvls0iqbn-jahnavikadali889-8503s-projects.vercel.app
+Backend API:
+https://study-tracker-backend-tocq.onrender.com
 
-### `npm start`
+📌 Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Study Tracker is a full-stack productivity and learning management web application designed to help students build consistent study habits.
+Users can securely create an account, record their daily study hours, analyse their progress using charts, upload study notes, receive intelligent study suggestions, and generate personalized study plans based on their learning goals, available daily hours, study duration, and skill level.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+💼 Business Value
 
-### `npm test`
+The application provides value by helping students:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Build consistent study habits
 
-### `npm run build`
+Track daily learning activities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Understand their study performance visually
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Identify subjects that need more attention
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Organize study notes and files
 
-### `npm run eject`
+Create structured and personalized learning plans
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This platform can be extended into a complete student productivity and learning management platform.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✨ Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🔐 Authentication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User Signup
 
-## Learn More
+User Login
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Secure password hashing using bcrypt
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+JWT-based authentication
 
-### Code Splitting
+Protected API routes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📊 Study Tracking
 
-### Analyzing the Bundle Size
+Add study records
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Track subject-wise study hours
 
-### Making a Progressive Web App
+Record study dates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Edit study records
 
-### Advanced Configuration
+Delete study records
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📈 Data Visualization
 
-### Deployment
+Bar Chart for study hours
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Pie Chart for subject-wise study distribution
 
-### `npm run build` fails to minify
+Total subjects count
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Total study hours calculation
+
+💡 Smart Suggestions
+
+The application analyses study records and provides suggestions based on the user's study activity.
+Examples:
+
+Identifies subjects receiving less study time
+
+Encourages consistency
+
+Provides positive feedback for balanced study habits
+
+📁 Study Notes Upload
+
+Upload study files
+
+View uploaded files
+
+Delete uploaded files
+
+File storage using Multer
+
+🤖 AI Study Plan Generator
+
+Users can generate personalized study plans by providing:
+
+Subject
+
+Daily study hours
+
+Study duration
+
+Learning goal
+
+Current skill level
+
+The system generates a structured day-by-day study plan with topics, study hours, and learning tasks.
+
+🛠️ Technology Stack
+
+Frontend
+
+React.js
+
+React Router
+
+Axios
+
+Tailwind CSS
+
+Chart.js
+
+React Chart.js 2
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+JWT
+
+bcrypt.js
+
+Multer
+
+CORS
+
+Deployment
+
+Vercel — Frontend Deployment
+
+Render — Backend Deployment
+
+MongoDB Atlas — Database
+
+CI/CD
+
+GitHub
+
+GitHub Actions
+
+Automated workflow-based deployment
+
+🏗️ System Architecture
+
+                    ┌─────────────────────┐
+                    │      User           │
+                    │  Browser / Mobile   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   React Frontend    │
+                    │      Vercel         │
+                    └──────────┬──────────┘
+                               │ REST API
+                               ▼
+                    ┌─────────────────────┐
+                    │  Node.js + Express  │
+                    │       Render        │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │  MongoDB Database   │
+                    │    MongoDB Atlas    │
+                    └─────────────────────┘ 
+
+📂 Project Structure
+
+STUDY-TRACKER/
+│
+├── backend/
+│   ├── .github/
+│   │   └── workflows/
+│   │
+│   ├── models/
+│   │   ├── File.js
+│   │   ├── Study.js
+│   │   └── User.js
+│   │
+│   ├── node_modules/
+│   ├── uploads/
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   └── tailwind.config.js
+│
+└── README.md ✅
+
+🔗 API Endpoints
+
+Authentication
+
+MethodEndpointDescriptionPOST/signupCreate a new userPOST/loginAuthenticate user and generate JWT 
+
+Study Tracking
+
+MethodEndpointDescriptionPOST/add-studyAdd a study recordGET/get-studyGet authenticated user's study recordsPUT/update-study/:idUpdate a study recordDELETE/delete-study/:idDelete a study record 
+
+Suggestions
+
+MethodEndpointDescriptionGET/suggestionGet personalized study suggestions 
+
+File Management
+
+MethodEndpointDescriptionPOST/uploadUpload a study fileGET/filesGet uploaded filesDELETE/delete-file/:filenameDelete an uploaded file 
+
+AI Study Plan
+
+MethodEndpointDescriptionPOST/generate-study-planGenerate a personalized study plan 
+
+⚙️ Local Installation
+
+1. Clone the Repository
+
+git clone YOUR_GITHUB_REPOSITORY_URL cd study-tracker 
+
+2. Install Frontend Dependencies
+
+cd frontend npm install 
+
+3. Install Backend Dependencies
+
+cd ../backend npm install 
+
+4. Start the Backend
+
+node server.js 
+
+5. Start the Frontend
+
+cd ../frontend npm start 
+
+🔐 Environment Variables
+
+For production environments, sensitive values such as database credentials and JWT secrets should be stored using environment variables.
+Example:
+MONGO_URI=your_mongodb_connection_string JWT_SECRET=your_jwt_secret PORT=5000 
+
+🔄 CI/CD Pipeline
+
+The project uses GitHub-based CI/CD automation.
+
+Workflow
+
+Developer 
+   ↓ 
+Code Changes 
+   ↓ 
+Git Commit 
+   ↓ 
+Git Push to GitHub 
+   ↓ 
+CI/CD Workflow 
+   ↓ 
+Build and Validation 
+   ↓ 
+Deployment 
+   ↓ 
+Live Application 
+The CI/CD workflow helps automate the software delivery process and reduces manual deployment effort.
+
+🌐 Deployment
+
+Frontend
+
+The React frontend is deployed on Vercel.
+
+Backend
+
+The Node.js and Express backend is deployed on Render.
+
+Database
+
+MongoDB Atlas is used as the cloud database.
+
+🔒 Security
+
+The application implements:
+
+JWT authentication
+
+Password hashing with bcrypt
+
+Protected API routes
+
+User-specific study data access
+
+CORS configuration
+
+Token-based authorization
+
+🚀 Future Enhancements
+
+Possible future improvements include:
+
+Real AI API integration
+
+Email notifications
+
+Study reminders
+
+Calendar integration
+
+Advanced analytics
+
+Mobile application
+
+Admin dashboard
+
+Social learning features
+
+Real-time collaboration
+
+Cloud-based file storage
+
+👩‍💻 Author
+
+Jahnavi Kadali
+MCA Student | Full-Stack Web Developer
+Interested in React.js, Node.js, MongoDB, AI-powered applications, and modern web development.
