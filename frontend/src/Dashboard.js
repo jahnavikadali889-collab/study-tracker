@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
@@ -49,7 +49,7 @@ function Dashboard() {
   const [isEditing, setIsEditing] = useState(false)  
     
   // 🔹 Suggestion function  
-  const getSuggestion = async () => {  
+  const getSuggestion = useCallback(async () => {  
     try {  
       const res = await axios.get(  
         "https://study-tracker-backend-tocq.onrender.com/suggestion",  
@@ -63,7 +63,7 @@ function Dashboard() {
     } catch (err) {  
       console.log(err)  
     }  
-  }
+  },[token])
 
   // 🔹 Add Study
   const addStudy = async () => {
@@ -132,7 +132,7 @@ function Dashboard() {
   }
 
   // 🔹 Get Data
-  const getData = async () => {
+  const getData = useCallback(async () => {
     try {
       const res = await axios.get(
         "https://study-tracker-backend-tocq.onrender.com/get-study",
@@ -146,10 +146,10 @@ function Dashboard() {
     } catch (err) {
       console.log(err)
     }
-  }
+  },[token])
 
   // get files
-  const getFiles = async () => {
+  const getFiles = useCallback(async () => {
     try {
       const res = await axios.get(
         "https://study-tracker-backend-tocq.onrender.com/files",
@@ -163,7 +163,7 @@ function Dashboard() {
     } catch (err) {
       console.log(err)
     }
-  }
+  },[token])
 
   // delete file
   const deleteFile = async (filename) => {
@@ -238,11 +238,11 @@ function Dashboard() {
     }
   }
 
-  useEffect(() => {
+ useEffect(() => {
   getData()
   getSuggestion()
   getFiles()
-}, [getData, getSuggestion, getFiles]) // Ikkada dependecies add chesam
+}, [getData, getSuggestion, getFiles])
 
   // 🔹 Subjects
   const subjects = data.map(item => item.subject)
