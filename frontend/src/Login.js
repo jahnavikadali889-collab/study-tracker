@@ -22,7 +22,6 @@ function Login() {
 
       localStorage.setItem("token", res.data.token);
 
-      alert("Login Successful ✅");
 
       navigate("/dashboard");
     } catch (err) {
